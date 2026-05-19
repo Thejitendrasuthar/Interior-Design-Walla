@@ -119,8 +119,7 @@ export default function TermsAndConditions() {
           <p className="text-sm text-gray-400 text-center italic leading-loose">
             Disclaimer: These terms are subject to change without prior notice.
             We recommend visiting this page periodically to stay updated on our
-            service policies. For legal inquiries, please contact our
-            administrative team at legal@yourdomain.com.
+            service policies.
           </p>
         </motion.div>
       </div>
