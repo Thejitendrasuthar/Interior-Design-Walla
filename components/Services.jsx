@@ -43,7 +43,7 @@ export default function Services() {
               img: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop",
             },
             {
-              title: "Custom Furniture & Styling",
+              title: "3D Visualization & Design",
               desc: "The perfect combination of bespoke furniture, lighting, and decor customized to your space and personal style.",
               img: "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?q=80&w=800&auto=format&fit=crop",
             },
