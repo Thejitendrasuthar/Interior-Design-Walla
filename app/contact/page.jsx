@@ -9,27 +9,26 @@ export default function Contact() {
   const formRef = useRef();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  emailjs.init({
+    publicKey: "-zqL2lLmopHaCZa7c",
+  });
+
   const sendEmail = async (e) => {
     e.preventDefault();
-    if (isSubmitting) return;
-
-    setIsSubmitting(true);
-    const toastId = toast.loading("Sending your message...");
-
-    const sendRequest = () =>
-      emailjs.sendForm("service_tmuctir", "template_5thfg4i", formRef.current, {
-        publicKey: "-zqL2lLmopHaCZa7c",
-      });
 
     try {
-      await sendRequest();
-      toast.success("Message sent successfully ✅", { id: toastId });
+      await emailjs.sendForm(
+        "service_tmuctir",
+        "template_5thfg4i",
+        formRef.current,
+      );
+
+      toast.success("Message sent ✅");
       formRef.current.reset();
-    } catch (err) {
-      console.log("Error:", err);
-      toast.error("Network issue 😢 Please try again.", { id: toastId });
+    } catch (error) {
+      console.log(error);
+      toast.error(error.text || "Failed");
     }
-    setIsSubmitting(false);
   };
 
   return (
