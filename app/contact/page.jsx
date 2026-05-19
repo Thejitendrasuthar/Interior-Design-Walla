@@ -17,7 +17,7 @@ export default function Contact() {
     const toastId = toast.loading("Sending your message...");
 
     const sendRequest = () =>
-      emailjs.sendForm("service_l64983o", "template_5thfg4i", formRef.current, {
+      emailjs.sendForm("service_j5jal28", "template_5thfg4i", formRef.current, {
         publicKey: "-zqL2lLmopHaCZa7c",
       });
 
